@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
     try {
         const emailResponse = await resend.emails.send({
-            from: 'Acme <onboarding@resend.dev>', // Must be a verified sender in Resend
+            from: 'Saif-Portfolio <onboarding@resend.dev>', // Must be a verified sender in Resend
             to: ['saif.mahmud.parvez@gmail.com'],         // Your destination email
             subject: `New Message from ${name}`,
             html: `<p><strong>Name:</strong> ${name}</p><p><strong>Message:</strong> ${message}</p>`,
