@@ -160,6 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
     runTypewriter();
 });
 
+document.querySelector("#sendMsgButton").addEventListener("click", handleSendMessage);
+
+function handleSendMessage(event) {
+    event.preventDefault();
+    handleSendMessage(event);
+}
+
+
 async function handleSendMessage(event) {
     event.preventDefault(); // prevent form from refreshing page
 
@@ -174,5 +182,6 @@ async function handleSendMessage(event) {
     });
 
     const data = await res.json();
+    console.log("Message sent successfully!");
     alert(data.message);
 }
